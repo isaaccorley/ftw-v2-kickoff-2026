@@ -70,39 +70,28 @@ Keep this as the receipts slide, but do not sell it as done. The important shift
 
 ---
 
-<div class="two-col wide-left">
-<div>
+<div class="trust-figure-slide">
+<div class="trust-copy">
 <div class="eyebrow">Global FTW paper</div>
 <h1>The release includes a trust signal</h1>
-<p>The polygons are only part of the product. Global FTW also ships confidence layers so users can filter, weight, and inspect predictions when labels are unavailable.</p>
-
-<div class="layer-list">
-  <div>
-    <strong>Default field boundaries</strong>
-    <span>confidence-thresholded polygons for general use.</span>
-  </div>
-  <div>
-    <strong>Full unfiltered dataset</strong>
-    <span>all predictions for users who need their own quality criteria.</span>
-  </div>
-  <div>
-    <strong>Continuous confidence raster</strong>
-    <span>a 500 m layer for weighting, filtering, and triage.</span>
-  </div>
-</div>
-</div>
+<p>Global FTW ships polygons plus a 500 m confidence raster for filtering and triage where labels are unavailable.</p>
 
 <div class="panel trust-panel">
-<h3>Open research question</h3>
-<p>How do we assess trust where we do not have local labels to compute metrics?</p>
-<p>The confidence layer estimates whether a 500 m cell contains reliable true-positive field predictions. It is not a certificate of individual polygon geometry.</p>
+<h3>Trust without labels</h3>
+<p>The confidence layer estimates cell-level reliability. It is not a certificate of individual polygon geometry.</p>
+</div>
+</div>
+
+<div class="paper-figure trust-figure">
+<img :src="'./images/ftw-confidence-layers-fig2.webp'" alt="Figure 2 from the Global FTW paper showing 500 m quality indicator rasters and confidence layer">
+<div class="image-caption">Figure 2: 500 m quality indicators and confidence layer</div>
 </div>
 </div>
 
 <div class="source">Source: Robinson et al., arXiv:2605.11055v1</div>
 
 <!--
-This is the trust slide. The global product is not just polygons. It also includes a confidence layer, which is the bridge between "we have labels here" and "users still need a reliability signal everywhere else." Be clear that confidence is a cell-level trust signal, not proof that every boundary is geometrically correct.
+This is the trust slide. The global product is not just polygons. Figure 2 shows the actual 500 m quality indicators and confidence layer, which bridge between "we have labels here" and "users still need a reliability signal everywhere else." Be clear that confidence is a cell-level trust signal, not proof that every boundary is geometrically correct.
 -->
 
 ---
