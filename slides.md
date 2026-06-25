@@ -1,11 +1,11 @@
 ---
 theme: default
 title: "Fields of The World Tech Kickoff"
-info: "High-level FTW kickoff update covering the global release, Explorer feedback, FTP, polygon-level metrics, FTW v2, field-level attributes, and ways to plug in."
+info: "Working-session update on Global FTW, confidence, Explorer feedback, FTP, polygon-level evaluation, FTW v2, and contribution paths."
 class: cover
 drawings:
   persist: false
-transition: fade-out
+transition: none
 mdc: true
 aspectRatio: "16/9"
 exportFilename: ftw-tech-kickoff-2026
@@ -20,7 +20,7 @@ routerMode: hash
   <img :src="'./images/ftw-logo-light.svg'" alt="Fields of The World">
   <div class="eyebrow">FTW Tech Kickoff · 2026</div>
   <h1>Fields of The World after the global release</h1>
-  <p class="callout">A status update: what shipped, what users are reporting, and where the work goes next.</p>
+  <p class="callout">Working notes on the dataset, the failure modes we are seeing, and where collaborators can make the next version better.</p>
   <div class="cover-meta">
     <span>Isaac Corley</span>
     <span class="dim">|</span>
@@ -31,7 +31,7 @@ routerMode: hash
 </div>
 
 <!--
-Opening frame: this is not a deep technical talk. It is a status update after the global release and a map of where the work is heading. The through-line is that FTW is becoming an ecosystem: data, models, tools, and community feedback loops.
+Opening frame: this is a working-session talk. The goal is not to pitch FTW as finished. It is to show what exists, what we trust, what we do not know yet, and where collaborators can help.
 -->
 
 ---
@@ -39,33 +39,33 @@ Opening frame: this is not a deep technical talk. It is a status update after th
 <div class="two-col wide-left">
 <div>
 <div class="eyebrow">Release baseline</div>
-<h1>Global FTW is live</h1>
-<p>A 10 m field-boundary layer for the whole planet — 2024 and 2025, free to browse and free to download.</p>
+<h1>What is now available</h1>
+<p>Global FTW is a 10 m field-boundary layer for 2024 and 2025. The useful question now is where it is reliable enough for analysis, and where it needs local review.</p>
 <div class="stat-strip">
 <div class="stat">
 <span class="value">3.17B</span>
-<span class="label">field polygons</span>
+<span class="label">field polygons in the release</span>
 </div>
 <div class="stat">
 <span class="value">241</span>
-<span class="label">countries and territories</span>
+<span class="label">countries / territories covered</span>
 </div>
 <div class="stat">
 <span class="value">2 yrs</span>
-<span class="label">2024–2025, Sentinel-2</span>
+<span class="label">annual Sentinel-2 runs</span>
 </div>
 </div>
 </div>
 <div class="image-panel">
 <img :src="'./images/ftw-global-map.webp'" alt="FTW global map preview">
-<div class="image-caption">FTW Explorer · global release preview</div>
+<div class="image-caption">Global FTW release preview</div>
 </div>
 </div>
 
 <div class="source">Source: fieldsofthe.world global release page</div>
 
 <!--
-Keep this as the receipts slide. The numbers are the anchor: 3.17 billion polygons, 241 countries and territories, 2024 and 2025 at 10 meter Sentinel-2 scale. The important shift is that people can now browse it, download it, and start giving concrete feedback.
+Keep this as the receipts slide, but do not sell it as done. The important shift is that the map is now public enough for people to inspect, download, and critique.
 -->
 
 ---
@@ -73,8 +73,8 @@ Keep this as the receipts slide. The numbers are the anchor: 3.17 billion polygo
 <div class="two-col wide-left">
 <div>
 <div class="eyebrow">Global FTW paper</div>
-<h1>The release is three layers, not one</h1>
-<p>Global FTW ships with a confidence map so users can decide where to trust, filter, or inspect predictions.</p>
+<h1>The release includes a trust signal</h1>
+<p>The polygons are only part of the product. Global FTW also ships confidence layers so users can filter, weight, and inspect predictions when labels are unavailable.</p>
 
 <div class="layer-list">
   <div>
@@ -108,13 +108,13 @@ This is the trust slide. The global product is not just polygons. It also includ
 ---
 
 <div class="eyebrow">Since release</div>
-<h1>Users are rating the map tile by tile</h1>
-<p>Beyond browsing, people are rating tiles, tagging failure modes, leaving notes, and offering to contribute.</p>
+<h1>Explorer feedback is becoming a research asset</h1>
+<p>Users are rating tiles, tagging failure modes, leaving notes, and offering local help. It is not a formal validation sample, but it is a useful map of where to look next.</p>
 
 <div class="stat-strip four">
   <div class="stat">
     <span class="value">4,440</span>
-    <span class="label">feedback records</span>
+<span class="label">feedback records</span>
   </div>
   <div class="stat">
     <span class="value">4,170</span>
@@ -136,7 +136,7 @@ This is the trust slide. The global product is not just polygons. It also includ
 Apr 23 – Jun 24, 2026, across 4,143 distinct map tiles.
 </div>
 <div class="compact-note">
-<strong>What's on offer</strong>
+<strong>Potential collaborators</strong>
 Annotation help, local data, code, and model contributions.
 </div>
 </div>
@@ -144,7 +144,7 @@ Annotation help, local data, code, and model contributions.
 <div class="source">Source: FTW Explorer user feedback</div>
 
 <!--
-This is the feedback receipts slide. Emphasize that this is not just website analytics. These are geolocated ratings and structured tags from people interacting with the Explorer. Also mention that contribution offers are important because FTW needs local validation and partner data.
+This is the feedback receipts slide. Emphasize that this is not website analytics. These are geolocated ratings and structured tags, but they are biased toward places people inspected and felt motivated to report.
 -->
 
 ---
@@ -152,8 +152,8 @@ This is the feedback receipts slide. Emphasize that this is not just website ana
 <div class="two-col wide-left">
 <div>
 <div class="eyebrow">Feedback analysis</div>
-<h1>Where users say the map needs work</h1>
-<p>This stream skews toward problems — people flag what looks wrong. Read it as a triage queue, not a representative accuracy score.</p>
+<h1>Feedback is a triage queue, not an accuracy metric</h1>
+<p>The signal skews toward problems, which is useful. It tells us where missing fields, shape errors, and merge/split failures are visible enough to users that they report them.</p>
 <div class="rating-stack">
 <div class="rating-line">
 <span class="name">Poor</span>
@@ -174,7 +174,7 @@ This is the feedback receipts slide. Emphasize that this is not just website ana
 <p class="note">Average rating: 1.61 / 3 across 4,207 rated tiles.</p>
 </div>
 <div class="panel">
-<h3>Top tags</h3>
+<h3>Common failure modes</h3>
 <div class="tag-stack">
 <div class="tag-line">
 <span class="name">missing fields</span>
@@ -213,7 +213,7 @@ This is the feedback receipts slide. Emphasize that this is not just website ana
 <div class="source">Source: FTW Explorer user feedback</div>
 
 <!--
-This is the "what are people saying" slide. Say explicitly that this is a triage stream. It over-represents places where people felt something was wrong, which is good for product improvement. The biggest tag is missing fields, followed by boundary shape and merge/split issues.
+This is the "what are people saying" slide. Say explicitly that this is a triage stream. It over-represents places where people felt something was wrong, which is useful for deciding what to validate and label next.
 -->
 
 ---
@@ -232,23 +232,23 @@ Transition slide.
 <div class="ftp-head">
 <div class="eyebrow">FTP · pre-release</div>
 <h1>Fields of the Planet: FTW at 3 m</h1>
-<p>Sentinel-2, PlanetScope, and FTW vector labels over the same patches.</p>
+<p>A paired dataset for studying whether higher-resolution imagery improves field-boundary extraction.</p>
 </div>
 <div class="paper-figure ftp-paper-figure">
 <img :src="'./images/ftp-hero.png'" alt="FTP paper hero figure comparing Sentinel-2, PlanetScope, and label polygons">
 </div>
 <div class="ftp-facts">
-<span><strong>3 m</strong> PlanetScope</span>
-<span><strong>66.6K</strong> paired FTW patches</span>
-<span><strong>133K</strong> seasonal windows</span>
-<span><strong>25</strong> regions / 24 countries</span>
+<span><strong>3 m</strong> PlanetScope companion imagery</span>
+<span><strong>66.6K</strong> FTW patches paired across sensors</span>
+<span><strong>133K</strong> seasonal image windows</span>
+<span><strong>25</strong> regions across 24 countries</span>
 </div>
 </div>
 
 <div class="source">Source: Fields of the Planet paper hero figure</div>
 
 <!--
-This is the one paper figure to use. The visual should make the FTP story obvious: S2 at 10m, Planet at 3m, same label polygons. Do not add more figures unless asked.
+This is the one paper figure to use. The visual should make the FTP story obvious: Sentinel-2 at 10 m, PlanetScope at 3 m, same label polygons. Keep the tone as "dataset for studying the question," not "new product hero."
 -->
 
 ---
@@ -256,8 +256,8 @@ This is the one paper figure to use. The visual should make the FTP story obviou
 <div class="two-col top">
   <div>
     <div class="eyebrow">Evaluation shift</div>
-    <h1>Score the polygons people actually use</h1>
-    <p>Pixel IoU can stay high while parcel boundaries merge, fragment, or drift. FTW users consume vector field polygons, so FTP evaluates after vectorization.</p>
+<h1>Evaluation should follow the object people consume</h1>
+    <p>Pixel IoU can stay high while parcel boundaries merge, fragment, or drift. Users consume vector polygons, so FTP evaluates after vectorization.</p>
     <div class="metric-points">
       <div><strong>Object F1</strong><span>Did we recover the field as a field?</span></div>
       <div><strong>Panoptic quality</strong><span>Detection and polygon overlap in one score.</span></div>
@@ -266,7 +266,7 @@ This is the one paper figure to use. The visual should make the FTP story obviou
   </div>
 
   <div class="panel">
-    <h3>Headline metrics</h3>
+    <h3>Protocol shift</h3>
     <div class="metric-bars">
       <div class="metric-row">
         <span class="name">S2 PQ</span>
@@ -289,7 +289,7 @@ This is the one paper figure to use. The visual should make the FTP story obviou
         <span class="number">7.4 m</span>
       </div>
     </div>
-    <p class="note">Scored against true FTW vector polygons at each sensor's native resolution.</p>
+    <p class="note">Scored against true FTW vector polygons at each sensor's native resolution. Boundary error is measured on matched polygons.</p>
   </div>
 </div>
 
@@ -304,8 +304,8 @@ This is the key measurement point. Pixel IoU is kept for continuity, but the mai
 <div class="two-col wide-left">
 <div>
 <div class="eyebrow">FTW v2</div>
-<h1>The next benchmark should be bigger and harder</h1>
-<p>Global release feedback gives us a map of where the current system fails. FTW v2 should turn that into stronger labels, harder validation, and better models.</p>
+<h1>The next benchmark should be shaped by failure modes</h1>
+<p>Global release feedback gives us a map of where the current system fails. FTW v2 should turn that into stronger labels, harder validation, and more realistic baselines.</p>
 <div class="chip-row">
 <span class="chip">more regions</span>
 <span class="chip">harder crops</span>
@@ -316,14 +316,14 @@ This is the key measurement point. Pixel IoU is kept for continuity, but the mai
 </div>
 </div>
 <div class="panel">
-<h3>Where contributors matter</h3>
-<p>New labels, local validation, benchmark issues, model configs, and reproducible baselines should land where the FTW community can review and reuse them.</p>
+<h3>Where collaborators matter</h3>
+<p>New labels, local validation, benchmark issues, model configs, and reproducible baselines should land where the FTW community can inspect and reuse them.</p>
 <p><strong>Repo:</strong> fieldsoftheworld/ftw-baselines</p>
 </div>
 </div>
 
 <!--
-FTW v2 is the next major benchmark/data/model loop: bigger, harder, cleaner, and more directly shaped by real user feedback. Point contributors toward ftw-baselines as the community-facing place for baseline work.
+FTW v2 is the next benchmark/data/model loop. The emphasis is not only bigger. It should be more directly shaped by observed failure modes and local validation.
 -->
 
 ---
@@ -331,8 +331,8 @@ FTW v2 is the next major benchmark/data/model loop: bigger, harder, cleaner, and
 <div class="two-col wide-left">
 <div>
 <div class="eyebrow">FTW Change · exploration</div>
-<h1>Annual maps become a change layer</h1>
-<p>With 2024 and 2025 side by side, we can start measuring what changed. Backfilling earlier Sentinel-2 years turns FTW into a time series, not just a current snapshot.</p>
+<h1>Annual maps make change detection possible</h1>
+<p>With 2024 and 2025 side by side, we can start producing candidate change signals. Backfilling earlier Sentinel-2 years turns FTW into a time series, not just a current snapshot.</p>
 <div class="chip-row">
 <span class="chip">field expansion</span>
 <span class="chip">consolidation</span>
@@ -342,8 +342,8 @@ FTW v2 is the next major benchmark/data/model loop: bigger, harder, cleaner, and
 </div>
 </div>
 <div class="panel">
-<h3>Example signal</h3>
-<p>Detect large new corporate-farm blocks that appear between 2024 and 2025, then route those candidates to local review instead of treating model output as final.</p>
+<h3>Example research task</h3>
+<p>Find large new field blocks that appear between 2024 and 2025, then route candidates to local review instead of treating model output as ground truth.</p>
 </div>
 </div>
 
@@ -354,8 +354,8 @@ This is intentionally exploratory. The message is that change layers should prod
 ---
 
 <div class="eyebrow">Field-level attributes</div>
-<h1>Boundaries become more useful when joined to other data</h1>
-<p>The global FTW layer is a field index. Once each polygon is stable, users can attach raster and vector attributes with zonal statistics or spatial joins.</p>
+<h1>Boundaries are an index for field-level analysis</h1>
+<p>The global FTW layer becomes more useful when joined to other data. Once each polygon is stable, users can attach raster and vector attributes with zonal statistics or spatial joins.</p>
 
 <div class="attribute-grid">
   <div class="attribute-card">
@@ -371,7 +371,7 @@ This is intentionally exploratory. The message is that change layers should prod
     <p>Country, district, watershed, protected area, tenure, and policy overlays.</p>
   </div>
   <div class="attribute-card">
-    <h3>Use-case products</h3>
+    <h3>Applied analyses</h3>
     <p>Field-level risk, production, insurance, carbon, subsidy, and supply-chain signals.</p>
   </div>
 </div>
@@ -383,7 +383,7 @@ This is where FTW becomes an analytics substrate. The polygon itself is useful, 
 ---
 
 <div class="eyebrow">How to plug in</div>
-<h1>Contribute where others can build on it</h1>
+<h1>Contribute where others can inspect and reuse it</h1>
 
 <div class="flow">
   <div class="flow-box">
@@ -392,7 +392,7 @@ This is where FTW becomes an analytics substrate. The polygon itself is useful, 
   </div>
   <div class="flow-box">
     <h3>Tutorials</h3>
-    <p>Build use-case tutorials: your crops, your region, your downstream workflow.</p>
+    <p>Write use-case tutorials for your crops, your region, and your downstream workflow.</p>
   </div>
   <div class="flow-box">
     <h3>Validation</h3>
@@ -420,7 +420,7 @@ This is where FTW becomes an analytics substrate. The polygon itself is useful, 
 </div>
 
 <!--
-End with actions. The important nudge: do not just use FTW privately. Put reusable code, model work, tutorials, and use-case examples where other people can build on them.
+End with workstreams. The important nudge: do not just use FTW privately. Put reusable code, model work, tutorials, validation notes, and use-case examples where other people can inspect and build on them.
 -->
 
 ---
