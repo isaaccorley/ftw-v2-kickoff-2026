@@ -96,11 +96,13 @@ This is the trust slide. The global product is not just polygons. Figure 2 shows
 
 ---
 
+<div class="feedback-receipts-slide">
+<div class="feedback-copy">
 <div class="eyebrow">Since release</div>
 <h1>Explorer feedback is becoming a research asset</h1>
 <p>Users are rating tiles, tagging failure modes, leaving notes, and offering local help. It is not a formal validation sample, but it is a useful map of where to look next.</p>
 
-<div class="stat-strip four">
+<div class="stat-strip feedback-stats">
   <div class="stat">
     <span class="value">4,440</span>
 <span class="label">feedback records</span>
@@ -119,14 +121,11 @@ This is the trust slide. The global product is not just polygons. Figure 2 shows
   </div>
 </div>
 
-<div class="compact-note-grid">
-<div class="compact-note">
-<strong>Time window</strong>
-Apr 23 – Jun 24, 2026, across 4,143 distinct map tiles.
 </div>
-<div class="compact-note">
-<strong>Potential collaborators</strong>
-Annotation help, local data, code, and model contributions.
+
+<div class="explorer-screenshot-panel">
+<img :src="'./images/ftw-explorer-feedback-form.webp'" alt="FTW Explorer contributor feedback form over the global predictions map">
+<div class="image-caption">FTW Explorer contributor form</div>
 </div>
 </div>
 

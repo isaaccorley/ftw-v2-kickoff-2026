@@ -634,6 +634,59 @@
   margin-top: 28px;
 }
 
+.feedback-receipts-slide {
+  align-items: center;
+  display: grid;
+  gap: 36px;
+  grid-template-columns: 0.88fr 1.12fr;
+  height: 100%;
+}
+
+.feedback-copy h1 {
+  font-size: 2.22rem;
+  margin-bottom: 16px;
+}
+
+.feedback-copy > p {
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.feedback-stats {
+  gap: 12px 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 22px;
+}
+
+.feedback-stats .stat {
+  min-height: 62px;
+  padding: 10px 0 8px;
+}
+
+.feedback-stats .value {
+  font-size: 1.42rem;
+}
+
+.feedback-stats .label {
+  font-size: 0.72rem;
+  margin-top: 5px;
+}
+
+.explorer-screenshot-panel {
+  background: rgba(244, 244, 235, 0.035);
+  border: 1px solid rgba(244, 244, 235, 0.14);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.explorer-screenshot-panel img {
+  display: block;
+  height: 306px;
+  object-fit: cover;
+  object-position: 67% 43%;
+  width: 100%;
+}
+
 .compact-note-grid {
   display: grid;
   gap: 24px;
