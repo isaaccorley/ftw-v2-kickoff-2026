@@ -383,7 +383,7 @@ This is where FTW becomes an analytics substrate. The polygon itself is useful, 
 ---
 
 <div class="eyebrow">How to plug in</div>
-<h1>Contribute where others can inspect and reuse it</h1>
+<h1>Make the work inspectable and reusable</h1>
 
 <div class="flow">
   <div class="flow-box">
