@@ -12,11 +12,11 @@ exportFilename: ftw-tech-kickoff-2026
 ---
 
 <div class="cover-frame">
-  <img :src="'/images/ftw-banner.webp'" alt="Agricultural field boundaries over satellite imagery">
+  <img :src="'./images/ftw-banner.webp'" alt="Agricultural field boundaries over satellite imagery">
 </div>
 
 <div class="cover-content">
-  <img :src="'/images/ftw-logo-light.svg'" alt="Fields of The World">
+  <img :src="'./images/ftw-logo-light.svg'" alt="Fields of The World">
   <div class="eyebrow">FTW Tech Kickoff · 2026</div>
   <h1>Fields of The World after the global release</h1>
   <p class="callout">A status update: what shipped, what users are reporting, and where the work goes next.</p>
@@ -56,7 +56,7 @@ Opening frame: this is not a deep technical talk. It is a status update after th
 </div>
 </div>
 <div class="image-panel">
-<img :src="'/images/ftw-global-map.webp'" alt="FTW global map preview">
+<img :src="'./images/ftw-global-map.webp'" alt="FTW global map preview">
 <div class="image-caption">FTW Explorer · global release preview</div>
 </div>
 </div>
@@ -234,7 +234,7 @@ Transition slide.
 <p>Sentinel-2, PlanetScope, and FTW vector labels over the same patches.</p>
 </div>
 <div class="paper-figure ftp-paper-figure">
-<img :src="'/images/ftp-hero.png'" alt="FTP paper hero figure comparing Sentinel-2, PlanetScope, and label polygons">
+<img :src="'./images/ftp-hero.png'" alt="FTP paper hero figure comparing Sentinel-2, PlanetScope, and label polygons">
 </div>
 <div class="ftp-facts">
 <span><strong>3 m</strong> PlanetScope</span>
@@ -425,7 +425,7 @@ End with actions. The important nudge: do not just use FTW privately. Put reusab
 ---
 
 <div class="section-full">
-  <img :src="'/images/ftw-logomark.svg'" alt="FTW logomark" style="height: 88px; margin-bottom: 30px;">
+  <img :src="'./images/ftw-logomark.svg'" alt="FTW logomark" style="height: 88px; margin-bottom: 30px;">
   <div class="eyebrow">Questions</div>
   <h1>What would make FTW more useful in your work?</h1>
   <p>Fields of The World · fieldsofthe.world</p>
