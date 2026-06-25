@@ -316,24 +316,21 @@ FTW v2 is the next benchmark/data/model loop. The emphasis is not only bigger. I
 
 ---
 
-<div class="two-col wide-left">
-<div>
+<div class="change-layer-slide">
+<div class="change-copy">
 <div class="eyebrow">FTW Change · exploration</div>
 <h1>Annual maps make change detection possible</h1>
 <p>With 2024 and 2025 side by side, we can start producing candidate change signals. Backfilling earlier Sentinel-2 years turns FTW into a time series, not just a current snapshot.</p>
-<div class="chip-row">
-<span class="chip">field expansion</span>
-<span class="chip">consolidation</span>
-<span class="chip">new large blocks</span>
-<span class="chip">loss & abandonment</span>
-<span class="chip">confidence shifts</span>
+<p class="change-note"><strong>Example task:</strong> find large new field blocks, then route candidates to local review instead of treating model output as ground truth.</p>
+</div>
+
+<div class="change-screenshot-panel">
+<img :src="'./images/ftw-change-layer.webp'" alt="FTW Explorer map showing the Change 2024 / 2025 layer with global predictions">
+<div class="image-caption">Prototype change layer in FTW Explorer</div>
 </div>
 </div>
-<div class="panel">
-<h3>Example research task</h3>
-<p>Find large new field blocks that appear between 2024 and 2025, then route candidates to local review instead of treating model output as ground truth.</p>
-</div>
-</div>
+
+<div class="source">Source: FTW Explorer change-layer prototype</div>
 
 <!--
 This is intentionally exploratory. The message is that change layers should produce candidate signals and review queues, not pretend to make governance claims by themselves. The 2024/2025 product opens the door, and backfilling previous years makes the signal useful.
@@ -415,11 +412,11 @@ End with workstreams. The important nudge: do not just use FTW privately. Put re
 
 <div class="section-full">
   <img :src="'./images/ftw-logomark.svg'" alt="FTW logomark" style="height: 88px; margin-bottom: 30px;">
-  <div class="eyebrow">Questions</div>
-  <h1>What would make FTW more useful in your work?</h1>
+  <div class="eyebrow">FTW Tech Kickoff</div>
+  <h1>Fields of The World</h1>
   <p>Fields of The World · fieldsofthe.world</p>
 </div>
 
 <!--
-Use this to turn the room toward feedback. The useful question is not whether FTW is impressive; it is what would make it trusted and useful enough for their work.
+Basic outro slide.
 -->
