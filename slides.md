@@ -9,6 +9,7 @@ transition: fade-out
 mdc: true
 aspectRatio: "16/9"
 exportFilename: ftw-tech-kickoff-2026
+routerMode: hash
 ---
 
 <div class="cover-frame">

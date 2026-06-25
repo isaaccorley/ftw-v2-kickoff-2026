@@ -20,7 +20,7 @@ make build
 For GitHub Pages:
 
 ```bash
-bun run build --base /ftw-v2-kickoff-2026/
+bun run build --base ./ --router-mode hash
 ```
 
 ## Files
